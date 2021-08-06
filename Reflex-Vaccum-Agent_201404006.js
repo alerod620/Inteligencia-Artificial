@@ -92,6 +92,7 @@ function estado_utilizado(states){
                 v7 = v7 + 1;
             }
             console.log("Estado: " + pos  + ", " + estado.locacion  + ", " + estado.A_estado + ", " +  estado.B_estado);
+            console.log("v0 =" + v0 + " v1 = " + v1 + " v2 = " + v2 + " v3 = " + v3 + " v4 = " + v4 + " v5 = " + v5 + " v6 = " + v6 + " v7 = " + v7)
         }
         pos = pos +1;
     }
