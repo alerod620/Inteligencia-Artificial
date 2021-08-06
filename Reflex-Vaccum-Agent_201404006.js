@@ -59,7 +59,6 @@ function estado_utilizado(states){
     let pos = 0;
     for(let estado of estados){
         if(states[0] == estado.locacion && states[1] == estado.A_estado && states[2] == estado.B_estado){
-            estado.utilizado = true; 
             if(pos == 0)
             {
                 v0 = v0 + 1;
