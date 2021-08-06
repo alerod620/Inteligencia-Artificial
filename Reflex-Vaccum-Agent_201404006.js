@@ -4,7 +4,7 @@ class Estado{
         this.A_estado = A_estado;
         this.B_estado = B_estado;
         this.utilizado = utilizado;
-        let visita = 0;
+        this.visita = 0;
     }
 }
 
