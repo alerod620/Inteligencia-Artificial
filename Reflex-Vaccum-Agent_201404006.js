@@ -3,7 +3,6 @@ class Estado{
         this.locacion = locacion;
         this.A_estado = A_estado;
         this.B_estado = B_estado;
-        this.utilizado = utilizado;
     }
 }
 
@@ -60,41 +59,39 @@ function estado_utilizado(states){
     let pos = 0;
     for(let estado of estados){
         if(states[0] == estado.locacion && states[1] == estado.A_estado && states[2] == estado.B_estado){
-            if(!estado.utilizado){
-                estado.utilizado = true; 
-                if(pos == 0)
-                {
-                    v0 = v0 + 1;
-                }
-                if(pos == 1)
-                {
-                    v1 = v1 + 1;
-                }
-                if(pos == 2)
-                {
-                    v2 = v2 + 1;
-                }
-                if(pos == 3)
-                {
-                    v3 = v3 + 1;
-                }
-                if(pos == 4)
-                {
-                    v4 = v4 + 1;
-                }
-                if(pos == 5)
-                {
-                    v5 = v5 + 1;
-                }
-                if(pos == 6)
-                {
-                    v6 = v6 + 1;
-                }
-                if(pos == 7)
-                {
-                    v7 = v7 + 1;
-                }
-            } 
+            estado.utilizado = true; 
+            if(pos == 0)
+            {
+                v0 = v0 + 1;
+            }
+            if(pos == 1)
+            {
+                v1 = v1 + 1;
+            }
+            if(pos == 2)
+            {
+                v2 = v2 + 1;
+            }
+            if(pos == 3)
+            {
+                v3 = v3 + 1;
+            }
+            if(pos == 4)
+            {
+                v4 = v4 + 1;
+            }
+            if(pos == 5)
+            {
+                v5 = v5 + 1;
+            }
+            if(pos == 6)
+            {
+                v6 = v6 + 1;
+            }
+            if(pos == 7)
+            {
+                v7 = v7 + 1;
+            }
             console.log("Estado: " + pos  + ", " + estado.locacion  + ", " + estado.A_estado + ", " +  estado.B_estado);
         }
         pos = pos +1;
@@ -106,7 +103,7 @@ function test(states){
     var state = states[0] == "A" ? states[1] : states[2];
     var action_result = reflex_agent(location, state);
 
-    document.getElementById("log").innerHTML+="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result).concat("<br>Contador de visitas --> S0=").concat(v0).concat(" | S1=").concat(v1).concat(" | S2=").concat(v2).concat(" | S3=").concat(v3).concat(" | S4=").concat(v4).concat(" | S5=").concat(v5).concat(" | S6=").concat(v6).concat(" | S7=").concat(v7);
+    document.getElementById("log").innerHTML+="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result).concat("<br>Contador de visitas<br>S0=").concat(v0).concat(" | S1=").concat(v1).concat("<br>S2=").concat(v2).concat(" | S3=").concat(v3).concat("<br>S4=").concat(v4).concat(" | S5=").concat(v5).concat("<br>S6=").concat(v6).concat(" | S7=").concat(v7);
 
     if (action_result == "CLEAN"){
         if (location == "A") states[1] = "CLEAN";
