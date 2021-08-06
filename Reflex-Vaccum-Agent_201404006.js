@@ -121,5 +121,9 @@ function test(states){
         
 }
 
+function numeroaleatorio(min,max){
+    return Math.floor((Math.random() * (max-min)) +min);
+}
+
 var states = ["A","DIRTY","DIRTY"];
 test(states);
