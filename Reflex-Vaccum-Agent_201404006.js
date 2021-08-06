@@ -92,7 +92,6 @@ function estado_utilizado(states){
                 v7 = v7 + 1;
             }
             console.log("Estado: " + pos  + ", " + estado.locacion  + ", " + estado.A_estado + ", " +  estado.B_estado);
-            console.log("v0 =" + v0 + " v1 = " + v1 + " v2 = " + v2 + " v3 = " + v3 + " v4 = " + v4 + " v5 = " + v5 + " v6 = " + v6 + " v7 = " + v7)
         }
         pos = pos +1;
     }
@@ -116,7 +115,7 @@ function test(states){
     estado_utilizado(states);
      
     if(v0 >= 2 && v1 >= 2 && v2 >= 2 && v3 >= 2 && v4 >= 2 && v5 >= 2 && v6 >= 2 && v7 >= 2){   
-	    document.getElementById("log").innerHTML+="<br>** Se cumplieron los 8 estados ** <br><br> ************ Fin de la ejecucion ************";
+	    document.getElementById("log").innerHTML+="<br>** Se visitaron al menos 2 veces cada estado ** <br><br> ************ Fin de la ejecucion ************";
     }else{
         setTimeout(function(){ test(states); }, 2000);
     }
