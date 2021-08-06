@@ -42,6 +42,11 @@ function reflex_agent(location, state){
    	else if (location=="B") return "LEFT";
 }
 
+
+function numeroaleatorio(min,max){
+    return Math.floor((Math.random() * (max-min)) +min);
+}
+
 function ensuciar(location, states){
     let random = numeroaleatorio(0,15);
     if( random < 5){
@@ -119,10 +124,6 @@ function test(states){
         setTimeout(function(){ test(states); }, 2000);
     }
         
-}
-
-function numeroaleatorio(min,max){
-    return Math.floor((Math.random() * (max-min)) +min);
 }
 
 var states = ["A","DIRTY","DIRTY"];
