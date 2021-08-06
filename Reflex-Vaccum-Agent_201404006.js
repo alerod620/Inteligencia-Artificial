@@ -101,7 +101,7 @@ function test(states){
     var state = states[0] == "A" ? states[1] : states[2];
     var action_result = reflex_agent(location, state);
 
-    document.getElementById("log").innerHTML+="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result).concat("<br>Contador de visitas --> S0=").concat(v0).concat(" S1=").concat(v1).concat(" S2=").concat(v2).concat(" S3=").concat(v3).concat(" S4=").concat(v4).concat(" S5=").concat(v5).concat(" S6=").concat(v6).concat(" S7=").concat(v7);
+    document.getElementById("log").innerHTML+="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result).concat("<br>Contador de visitas --> S0=").concat(v0).concat(" | S1=").concat(v1).concat(" | S2=").concat(v2).concat(" | S3=").concat(v3).concat(" | S4=").concat(v4).concat(" | S5=").concat(v5).concat(" | S6=").concat(v6).concat(" | S7=").concat(v7);
 
     if (action_result == "CLEAN"){
         if (location == "A") states[1] = "CLEAN";
@@ -113,7 +113,7 @@ function test(states){
     ensuciar(location, states);
     estado_utilizado(states);
      
-    if(estados[0].visita >= 2 && estados[1].visita >= 2 && estados[2].visita >= 2 && estados[3].visita >= 2 && estados[4].visita >= 2 && estados[5].visita >= 2 && estados[6].visita >= 2 && estados[7].visita >= 2){   
+    if(v0 >= 2 && v1 >= 2 && v2 >= 2 && v3 >= 2 && v4 >= 2 && v5 >= 2 && v6 >= 2 && v7 >= 2){   
 	    document.getElementById("log").innerHTML+="<br>** Se cumplieron los 8 estados ** <br><br> ************ Fin de la ejecucion ************";
     }else{
         setTimeout(function(){ test(states); }, 2000);
